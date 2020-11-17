@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Spacex.Blue.NoActionBar">
+        <item name="colorPrimary">@color/blue_1</item>
+        <item name="colorPrimaryVariant">@color/blue_2</item>
+        <item name="colorOnPrimary">@color/black</item>
+
+        <item name="colorSecondary">@color/green_1</item>
+        <item name="colorSecondaryVariant">@color/green_2</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <item name="colorSurface">@color/dark_primary</item>
+        <item name="colorOnSurface">#FFFFFF</item>
+    </style>
+
+</resources>

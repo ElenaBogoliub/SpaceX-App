@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_launches"
+    app:startDestination="@+id/navigation_launches">
+
+    <fragment
+        android:id="@+id/navigation_launches"
+        android:name="com.ebogoliub.spacex.launches.LaunchesFragment"
+        android:label="@string/title_next_launch_title" />
+
+    <include app:graph="@navigation/launch_details_nav_graph" />
+
+</navigation>

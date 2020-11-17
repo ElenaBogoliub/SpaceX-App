@@ -1,0 +1,12 @@
+include ':features:ui-base'
+include ':libraries:flowmvi'
+include ':features:ui-launch-details'
+include ':features:ui-rockets'
+include ':features:ui-launches'
+include ':features:ui-next-launch'
+include ':libraries:core-ui'
+include ':libraries:core'
+include ':libraries:api'
+include ':data'
+include ':app'
+rootProject.name = "Spacex"

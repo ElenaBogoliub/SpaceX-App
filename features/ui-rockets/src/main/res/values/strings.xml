@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="rockets_lbl">Rockets</string>
+    <string name="rocket_active">Active</string>
+    <string name="rocket_inactive">Inactive</string>
+    <string name="rocket_company_lbl">Company</string>
+    <string name="rocket_first_flight_lbl">First flight</string>
+    <string name="rocket_success_rate_lbl">Success rate percentage</string>
+    <string name="rocket_cost_per_launch_lbl">Cost per launch</string>
+</resources>

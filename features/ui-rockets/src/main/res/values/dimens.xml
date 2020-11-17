@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="rocket_item_vertical_margin">24dp</dimen>
+
+    <dimen name="rocket_item_original_height">88dp</dimen>
+    <dimen name="rocket_item_expanded_height">422dp</dimen>
+    <dimen name="rocket_item_expanded_view_height">280dp</dimen>
+
+</resources>

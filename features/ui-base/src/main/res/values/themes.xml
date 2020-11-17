@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.App" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="toolbarStyle">@style/Widget.App.Toolbar</item>
+        <item name="appBarLayoutStyle">@style/Widget.MaterialComponents.AppBarLayout.Surface</item>
+        <item name="actionBarTheme">@style/ThemeOverlay.App.ActionBar</item>
+        <item name="windowActionModeOverlay">true</item>
+
+        <!--Material type attributes-->
+        <item name="textAppearanceHeadline1">@style/TextAppearance.Spacex.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.Spacex.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.Spacex.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.Spacex.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.Spacex.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.Spacex.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.Spacex.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.Spacex.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.Spacex.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.Spacex.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Spacex.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.Spacex.Caption</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.Spacex.Overline</item>
+
+        <!-- Custom attributes -->
+        <item name="emptyViewStyle">@style/Widget.App.EmptyView</item>
+    </style>
+
+    <style name="ThemeOverlay.App.ActionBar" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar" />
+
+    <style name="Spacex" parent="@style/Base.App">
+        <item name="android:navigationBarColor">@color/nav_bar</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">@bool/use_light_nav_bar</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="bottomNavigationStyle">@style/Widget.Spacex.BottomNavigationView</item>
+    </style>
+
+    <style name="Spacex.Blue">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Spacex.Blue.NoActionBar">
+        <item name="colorPrimary">@color/blue_1</item>
+        <item name="colorPrimaryVariant">@color/blue_2</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorSecondary">@color/green_1</item>
+        <item name="colorSecondaryVariant">@color/green_2</item>
+        <item name="colorOnSecondary">@color/black</item>
+    </style>
+
+</resources>

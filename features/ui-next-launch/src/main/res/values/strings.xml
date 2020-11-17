@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="next_launch_countdown_uncertain">Launch Time Uncertain</string>
+    <string name="next_launch_lbl">Next launch</string>
+    <string name="next_launch_rocket_lbl">Rocket</string>
+    <string name="next_launch_rocket_name">%1$s (%2$s)</string>
+    <string name="next_launch_site_lbl">Launch site</string>
+    <string name="next_launch_date_lbl">Launch date</string>
+    <string name="next_launch_mission_lbl">Mission</string>
+    <plurals name="next_launch_day">
+        <item quantity="zero">%d Day</item>
+        <item quantity="one">%d Day</item>
+        <item quantity="other">%d Days</item>
+    </plurals>
+</resources>

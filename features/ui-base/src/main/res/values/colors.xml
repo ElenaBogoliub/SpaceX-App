@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_1">#076DF6</color>
+    <color name="blue_2">#095DCF</color>
+
+    <color name="green_1">#00F479</color>
+    <color name="green_2">#08DA70</color>
+
+    <color name="dark_blue_1">#19024F</color>
+    <color name="dark_blue_2">#001371</color>
+    <color name="dark_blue_3">#001130</color>
+
+    <color name="grey_1">#B8B8B8</color>
+
+    <color name="dark_primary">#242316</color>
+    <color name="red">#FF001B</color>
+    <color name="yellow">#FFCA28</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="immersive_sys_ui">#33000000</color>
+    <color name="nav_bar">@color/immersive_sys_ui</color>
+</resources>
