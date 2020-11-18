@@ -33,7 +33,7 @@ class RocketsFragment : Fragment(R.layout.fragment_rockets) {
         Insetter.builder()
             .applySystemWindowInsetsToPadding(Side.TOP)
             .consumeSystemWindowInsets(Insetter.CONSUME_AUTO)
-            .applyToView(binding.appbar)
+            .applyToView(binding.root)
 
         adapter = RocketsAdapter(requireContext())
         binding.recyclerView.adapter = adapter

@@ -45,7 +45,7 @@ class LaunchesFragment : Fragment(R.layout.fragment_launches) {
         Insetter.builder()
             .applySystemWindowInsetsToPadding(Side.TOP)
             .consumeSystemWindowInsets(Insetter.CONSUME_AUTO)
-            .applyToView(binding.appbar)
+            .applyToView(binding.root)
 
         adapter = LaunchesAdapter()
         onScrollListener =
