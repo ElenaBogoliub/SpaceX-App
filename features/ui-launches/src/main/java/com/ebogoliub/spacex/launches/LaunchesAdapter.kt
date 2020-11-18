@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.transform.CircleCropTransformation
-import com.ebogoliub.spacex.data.entities.Launch
-import com.ebogoliub.spacex.data.entities.missionPatch
+import com.ebogoliub.spacex.data.entity.Launch
+import com.ebogoliub.spacex.data.entity.missionPatch
 import com.ebogoliub.spacex.features.ui.launches.R
 import com.ebogoliub.spacex.features.ui.launches.databinding.ItemLaunchBinding
 import com.ebogoliub.spacex.ui.extentions.bindColor

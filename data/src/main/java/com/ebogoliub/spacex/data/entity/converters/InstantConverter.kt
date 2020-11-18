@@ -1,4 +1,4 @@
-package com.ebogoliub.spacex.data.entities.converters
+package com.ebogoliub.spacex.data.entity.converters
 
 import androidx.room.TypeConverter
 import org.threeten.bp.Instant

@@ -1,8 +1,8 @@
 package com.ebogoliub.spacex.ui.rockets
 
 import com.ebogoliub.spacex.core.FetcherResult
-import com.ebogoliub.spacex.data.entities.Rocket
-import com.ebogoliub.spacex.data.repositories.RocketsRepository
+import com.ebogoliub.spacex.data.entity.Rocket
+import com.ebogoliub.spacex.data.repository.RocketsRepository
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

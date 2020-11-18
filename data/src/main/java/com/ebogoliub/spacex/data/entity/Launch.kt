@@ -1,4 +1,4 @@
-package com.ebogoliub.spacex.data.entities
+package com.ebogoliub.spacex.data.entity
 
 import androidx.room.*
 import org.threeten.bp.ZonedDateTime

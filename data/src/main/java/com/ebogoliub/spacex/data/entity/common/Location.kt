@@ -1,4 +1,4 @@
-package com.ebogoliub.spacex.data.entities.common
+package com.ebogoliub.spacex.data.entity.common
 
 data class Location(
     val name: String,

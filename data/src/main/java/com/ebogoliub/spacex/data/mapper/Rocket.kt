@@ -1,14 +1,14 @@
-package com.ebogoliub.spacex.data.mappers
+package com.ebogoliub.spacex.data.mapper
 
 import com.ebogoliub.spacex.api.common.LengthDto
 import com.ebogoliub.spacex.api.common.MassDto
 import com.ebogoliub.spacex.api.common.SecondStageDto
 import com.ebogoliub.spacex.api.common.ThrustDto
 import com.ebogoliub.spacex.api.rocket.*
-import com.ebogoliub.spacex.data.entities.*
-import com.ebogoliub.spacex.data.entities.common.Length
-import com.ebogoliub.spacex.data.entities.common.Mass
-import com.ebogoliub.spacex.data.entities.common.Thrust
+import com.ebogoliub.spacex.data.entity.*
+import com.ebogoliub.spacex.data.entity.common.Length
+import com.ebogoliub.spacex.data.entity.common.Mass
+import com.ebogoliub.spacex.data.entity.common.Thrust
 
 internal fun RocketDto.toRocket(): Rocket = Rocket(
     rocketId = this.rocketId,

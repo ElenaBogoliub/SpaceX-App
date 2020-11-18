@@ -1,8 +1,8 @@
 package com.ebogoliub.spacex.launches
 
 import com.ebogoliub.spacex.core.FetcherResult
-import com.ebogoliub.spacex.data.entities.Launch
-import com.ebogoliub.spacex.data.repositories.LaunchesRepository
+import com.ebogoliub.spacex.data.entity.Launch
+import com.ebogoliub.spacex.data.repository.LaunchesRepository
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

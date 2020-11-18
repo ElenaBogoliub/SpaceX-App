@@ -1,7 +1,7 @@
-package com.ebogoliub.spacex.data.mappers
+package com.ebogoliub.spacex.data.mapper
 
 import com.ebogoliub.spacex.api.launches.*
-import com.ebogoliub.spacex.data.entities.*
+import com.ebogoliub.spacex.data.entity.*
 
 internal fun LaunchDto.toLaunch(): Launch = Launch(
     id = flightNumber.toLong(),

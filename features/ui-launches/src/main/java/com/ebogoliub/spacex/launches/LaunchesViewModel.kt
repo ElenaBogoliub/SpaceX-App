@@ -7,7 +7,7 @@ import com.ebogoliub.flowmvi.StateWithEffects
 import com.ebogoliub.spacex.core.FetcherResult
 import com.ebogoliub.spacex.core.di.CoroutinesDispatchers
 import com.ebogoliub.spacex.core.extentions.hasAtLeastSize
-import com.ebogoliub.spacex.data.repositories.LaunchesRepository.Companion.DEFAULT_LIMIT
+import com.ebogoliub.spacex.data.repository.LaunchesRepository.Companion.DEFAULT_LIMIT
 import com.ebogoliub.spacex.ui.mvvm.BaseMviViewModel
 import com.ebogoliub.ui.base.content.ErrorMessageProvider
 import kotlinx.coroutines.flow.Flow

@@ -1,10 +1,10 @@
-package com.ebogoliub.spacex.data.daos
+package com.ebogoliub.spacex.data.dao
 
 import androidx.room.Dao
 import androidx.room.Query
 import androidx.room.Transaction
-import com.ebogoliub.spacex.data.entities.Launch
-import com.ebogoliub.spacex.data.entities.LaunchPictures
+import com.ebogoliub.spacex.data.entity.Launch
+import com.ebogoliub.spacex.data.entity.LaunchPictures
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.runBlocking
 

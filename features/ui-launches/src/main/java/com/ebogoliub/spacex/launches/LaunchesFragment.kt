@@ -67,7 +67,6 @@ class LaunchesFragment : Fragment(R.layout.fragment_launches) {
         }
     }
 
-
     private fun onEvent(event: SingleLiveEvent) {
         when (event) {
             is ShowToast -> {

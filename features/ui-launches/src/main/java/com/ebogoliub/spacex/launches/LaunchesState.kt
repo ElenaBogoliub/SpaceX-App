@@ -1,13 +1,13 @@
 package com.ebogoliub.spacex.launches
 
-import com.ebogoliub.spacex.data.entities.Launch
-import com.ebogoliub.spacex.data.repositories.LaunchType
+import com.ebogoliub.spacex.data.entity.Launch
+import com.ebogoliub.spacex.data.repository.LaunchType
 import com.ebogoliub.spacex.ui.livedata.SingleLiveEvent
 import com.ebogoliub.ui.base.content.EmptyState
 import com.ebogoliub.ui.base.content.StringSource
 
 data class LaunchesState(
-    val filter: LaunchType = LaunchType.Recent,
+    val filter: LaunchType = LaunchType.ALL, // TODO
     val items: List<Launch> = emptyList(),
     val hasMore: Boolean = true,
     val isLoading: Boolean = true,

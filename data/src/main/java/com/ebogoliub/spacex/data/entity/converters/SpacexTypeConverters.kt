@@ -1,7 +1,7 @@
-package com.ebogoliub.spacex.data.entities.converters
+package com.ebogoliub.spacex.data.entity.converters
 
 import androidx.room.TypeConverter
-import com.ebogoliub.spacex.data.entities.DatePrecision
+import com.ebogoliub.spacex.data.entity.DatePrecision
 
 class SpacexTypeConverters {
 

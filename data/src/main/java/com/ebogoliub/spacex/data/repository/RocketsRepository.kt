@@ -1,13 +1,13 @@
-package com.ebogoliub.spacex.data.repositories
+package com.ebogoliub.spacex.data.repository
 
 import com.ebogoliub.spacex.api.rocket.RocketsService
 import com.ebogoliub.spacex.core.DataStoreFactory
 import com.ebogoliub.spacex.core.Fetcher
 import com.ebogoliub.spacex.core.FetcherResult
 import com.ebogoliub.spacex.core.SourceOfTruth
-import com.ebogoliub.spacex.data.daos.RocketsDao
-import com.ebogoliub.spacex.data.entities.Rocket
-import com.ebogoliub.spacex.data.mappers.toRocket
+import com.ebogoliub.spacex.data.dao.RocketsDao
+import com.ebogoliub.spacex.data.entity.Rocket
+import com.ebogoliub.spacex.data.mapper.toRocket
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

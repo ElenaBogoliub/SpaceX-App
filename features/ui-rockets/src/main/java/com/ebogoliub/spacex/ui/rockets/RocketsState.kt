@@ -1,6 +1,6 @@
 package com.ebogoliub.spacex.ui.rockets
 
-import com.ebogoliub.spacex.data.entities.Rocket
+import com.ebogoliub.spacex.data.entity.Rocket
 import com.ebogoliub.ui.base.content.EmptyState
 
 data class RocketsState(

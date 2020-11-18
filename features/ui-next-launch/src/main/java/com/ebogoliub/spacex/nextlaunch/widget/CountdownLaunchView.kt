@@ -4,8 +4,8 @@ import android.content.Context
 import android.os.CountDownTimer
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatTextView
-import com.ebogoliub.spacex.data.entities.DatePrecision
-import com.ebogoliub.spacex.data.entities.Launch
+import com.ebogoliub.spacex.data.entity.DatePrecision
+import com.ebogoliub.spacex.data.entity.Launch
 import com.ebogoliub.spacex.features.ui.next_launch.R
 import org.threeten.bp.Duration
 import org.threeten.bp.ZonedDateTime

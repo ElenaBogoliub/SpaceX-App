@@ -5,7 +5,7 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.ebogoliub.features.ui.rockets.R
 import com.ebogoliub.features.ui.rockets.databinding.ItemRocketBinding
-import com.ebogoliub.spacex.data.entities.Rocket
+import com.ebogoliub.spacex.data.entity.Rocket
 import com.ebogoliub.spacex.ui.extentions.bindColor
 import com.ebogoliub.spacex.ui.extentions.bindDrawable
 

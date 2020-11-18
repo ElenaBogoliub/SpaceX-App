@@ -1,7 +1,7 @@
-package com.ebogoliub.spacex.data.daos
+package com.ebogoliub.spacex.data.dao
 
 import androidx.room.*
-import com.ebogoliub.spacex.data.entities.SpacexEntity
+import com.ebogoliub.spacex.data.entity.SpacexEntity
 
 @Dao
 abstract class BaseDao <in T : SpacexEntity> {
@@ -24,7 +24,7 @@ abstract class BaseDao <in T : SpacexEntity> {
     @Transaction
     open suspend fun withTransaction(tx: suspend () -> Unit) = tx()
 
-    suspend fun insertOrUpdate(entity: T): Long {
+    suspend fun upsert(entity: T): Long {
         return if (entity.id == 0L) {
             insert(entity)
         } else {
@@ -34,9 +34,9 @@ abstract class BaseDao <in T : SpacexEntity> {
     }
 
     @Transaction
-    open suspend fun insertOrUpdate(entities: List<T>) {
+    open suspend fun upsert(entities: List<T>) {
         entities.forEach {
-            insertOrUpdate(it)
+            upsert(it)
         }
     }
 }

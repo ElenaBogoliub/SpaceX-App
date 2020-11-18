@@ -1,6 +1,6 @@
 package com.ebogoliub.spacex.data
 
-import com.ebogoliub.spacex.data.daos.*
+import com.ebogoliub.spacex.data.dao.*
 
 interface SpacexDatabase {
     fun launchDao(): LaunchDao

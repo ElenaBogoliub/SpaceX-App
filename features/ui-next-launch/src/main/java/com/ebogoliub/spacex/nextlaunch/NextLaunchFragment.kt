@@ -9,7 +9,7 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import com.ebogoliub.spacex.features.ui.next_launch.R
 import com.ebogoliub.spacex.features.ui.next_launch.databinding.NextLaunchFragmentBinding
 import dagger.hilt.android.AndroidEntryPoint
-import com.ebogoliub.spacex.data.entities.Launch
+import com.ebogoliub.spacex.data.entity.Launch
 import com.ebogoliub.spacex.ui.animation.fadeInWithTranslationY
 import com.ebogoliub.spacex.ui.extentions.formatDate
 

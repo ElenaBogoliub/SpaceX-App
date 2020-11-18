@@ -1,12 +1,12 @@
-package com.ebogoliub.spacex.data.entities
+package com.ebogoliub.spacex.data.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.ebogoliub.spacex.data.entities.common.Length
-import com.ebogoliub.spacex.data.entities.common.Mass
-import com.ebogoliub.spacex.data.entities.common.Thrust
+import com.ebogoliub.spacex.data.entity.common.Length
+import com.ebogoliub.spacex.data.entity.common.Mass
+import com.ebogoliub.spacex.data.entity.common.Thrust
 
 @Entity
 data class Rocket(

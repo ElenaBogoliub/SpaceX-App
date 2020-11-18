@@ -1,4 +1,4 @@
-package com.ebogoliub.spacex.data.entities
+package com.ebogoliub.spacex.data.entity
 
 enum class DatePrecision(val dateFormat: String) {
     year("yyyy"),

@@ -4,12 +4,12 @@ import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.ebogoliub.spacex.data.SpacexDatabase
-import com.ebogoliub.spacex.data.entities.*
-import com.ebogoliub.spacex.data.entities.converters.InstantConverter
-import com.ebogoliub.spacex.data.entities.converters.SpacexTypeConverters
-import com.ebogoliub.spacex.data.entities.converters.ListConverter
-import com.ebogoliub.spacex.data.entities.converters.ZonedDateTimeConverter
-import com.ebogoliub.spacex.data.entities.Launch
+import com.ebogoliub.spacex.data.entity.*
+import com.ebogoliub.spacex.data.entity.converters.InstantConverter
+import com.ebogoliub.spacex.data.entity.converters.SpacexTypeConverters
+import com.ebogoliub.spacex.data.entity.converters.ListConverter
+import com.ebogoliub.spacex.data.entity.converters.ZonedDateTimeConverter
+import com.ebogoliub.spacex.data.entity.Launch
 
 @Database(
     entities = [

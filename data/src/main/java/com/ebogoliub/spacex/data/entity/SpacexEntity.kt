@@ -1,4 +1,4 @@
-package com.ebogoliub.spacex.data.entities
+package com.ebogoliub.spacex.data.entity
 
 interface SpacexEntity {
     val id: Long
