@@ -1,9 +1,5 @@
 package com.ebogoliub.spacex.api.rocket
 
-import com.ebogoliub.spacex.api.common.LengthDto
-import com.ebogoliub.spacex.api.common.MassDto
-import com.ebogoliub.spacex.api.common.SecondStageDto
-import com.ebogoliub.spacex.api.common.ThrustDto
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
@@ -82,4 +78,31 @@ data class PayloadWeight(
     @Json(name = "name") val name: String,
     @Json(name = "kg") val weightKg: Double,
     @Json(name = "lb") val weightLb: Double
+)
+
+@JsonClass(generateAdapter = true)
+data class SecondStageDto(
+    @Json(name = "engines") val engines: Int,
+    @Json(name = "fuel_amount_tons") val fuelAmountTons: Double?,
+    @Json(name = "burn_time_sec") val burnTimeSecs: Double?,
+    @Json(name = "thrust") val thrust: ThrustDto,
+    @Json(name = "payloads") val payloads: PayloadsDto
+)
+
+@JsonClass(generateAdapter = true)
+data class ThrustDto(
+    @Json(name = "kN") val kN: Double,
+    @Json(name = "lbf") val lbf: Double
+)
+
+@JsonClass(generateAdapter = true)
+data class LengthDto(
+    @Json(name = "meters") val meters: Double?,
+    @Json(name = "feet") val feet: Double?
+)
+
+@JsonClass(generateAdapter = true)
+data class MassDto(
+    @Json(name = "kg") val kg: Double,
+    @Json(name = "lb") val lb: Double
 )

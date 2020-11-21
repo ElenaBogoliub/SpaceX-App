@@ -8,7 +8,7 @@
     <string name="next_launch_date_lbl">Launch date</string>
     <string name="next_launch_mission_lbl">Mission</string>
     <plurals name="next_launch_day">
-        <item quantity="zero">%d Day</item>
+        <item quantity="zero">%d Days</item>
         <item quantity="one">%d Day</item>
         <item quantity="other">%d Days</item>
     </plurals>

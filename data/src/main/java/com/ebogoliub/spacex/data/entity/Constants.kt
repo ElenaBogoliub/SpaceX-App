@@ -1,20 +1,20 @@
 package com.ebogoliub.spacex.data.entity
 
 enum class DatePrecision(val dateFormat: String) {
-    year("yyyy"),
-    half("yyyy"),
-    quarter("yyyy"),
-    month("MMM, yyyy"),
-    day("d MMM, yyyy"),
-    hour("hh:mm a, d MMM, yyyy"),
-    unknown("'Unknown'")
+    YEAR("yyyy"),
+    HALF("yyyy"),
+    QUARTER("yyyy"),
+    MONTH("MMM, yyyy"),
+    DAY("d MMM, yyyy"),
+    HOUR("hh:mm a, d MMM, yyyy"),
+    UNKNOWN("'Unknown'")
 }
 
 fun String?.toDatePrecision(): DatePrecision {
-    this ?: return DatePrecision.unknown
+    this ?: return DatePrecision.UNKNOWN
     return try {
         DatePrecision.valueOf(this)
     } catch (ex: IllegalArgumentException) {
-        DatePrecision.unknown
+        DatePrecision.UNKNOWN
     }
 }

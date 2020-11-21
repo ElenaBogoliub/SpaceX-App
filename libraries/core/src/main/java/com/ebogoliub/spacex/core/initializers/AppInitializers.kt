@@ -6,8 +6,10 @@ class AppInitializers @Inject constructor(
     private val initializers: Set<@JvmSuppressWildcards AppInitializer>
 ) {
     fun init() {
-        initializers.forEach {
-            it.initialize()
-        }
+        initializers
+            .sortedBy { it.priority }
+            .forEach {
+                it.initialize()
+            }
     }
 }

@@ -18,10 +18,6 @@ android {
     buildFeatures {
         viewBinding = true
     }
-//    kapt.includeCompileClasspath = false
-//    kotlinOptions {
-//        jvmTarget = "1.8"
-//    }
 }
 
 kapt {

@@ -5,12 +5,6 @@ import kotlinx.coroutines.flow.*
 import java.util.concurrent.atomic.AtomicBoolean
 import java.util.concurrent.atomic.AtomicReference
 
-fun Job?.cancelIfActive() {
-    if (this?.isActive == true) {
-        cancel()
-    }
-}
-
 @ExperimentalCoroutinesApi
 fun <T, R> Flow<T>.flatMapFirst(transform: suspend (value: T) -> Flow<R>): Flow<R> =
     map(transform).flattenFirst()

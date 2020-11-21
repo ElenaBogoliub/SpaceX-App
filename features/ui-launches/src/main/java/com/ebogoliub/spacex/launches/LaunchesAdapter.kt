@@ -11,8 +11,8 @@ import com.ebogoliub.spacex.data.entity.Launch
 import com.ebogoliub.spacex.data.entity.missionPatch
 import com.ebogoliub.spacex.features.ui.launches.R
 import com.ebogoliub.spacex.features.ui.launches.databinding.ItemLaunchBinding
-import com.ebogoliub.spacex.ui.extentions.bindColor
 import com.ebogoliub.spacex.ui.extentions.formatDate
+import com.ebogoliub.spacex.ui.extentions.getColorFromRes
 import org.threeten.bp.Duration
 import org.threeten.bp.ZonedDateTime
 
@@ -26,9 +26,9 @@ class LaunchesAdapter : ListAdapter<Launch, LaunchesAdapter.LaunchViewHolder>(
     }
 ) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LaunchViewHolder =
-        LaunchViewHolder(
-            ItemLaunchBinding.inflate(LayoutInflater.from(parent.context), parent, false),
-        )
+        LayoutInflater.from(parent.context)
+            .let { ItemLaunchBinding.inflate(it, parent, false) }
+            .let { LaunchViewHolder(it) }
 
     override fun onBindViewHolder(holder: LaunchViewHolder, position: Int) =
         holder.bind(getItem(position))
@@ -37,8 +37,8 @@ class LaunchesAdapter : ListAdapter<Launch, LaunchesAdapter.LaunchViewHolder>(
         private val binding: ItemLaunchBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        private val greenColor by bindColor(itemView.context, R.color.green_1)
-        private val yellowColor by bindColor(itemView.context, R.color.yellow)
+        private val greenColor = itemView.context.getColorFromRes(R.color.green_1)
+        private val yellowColor = itemView.context.getColorFromRes(R.color.yellow)
 
         fun bind(launch: Launch) {
             binding.launchName.text = launch.missionName

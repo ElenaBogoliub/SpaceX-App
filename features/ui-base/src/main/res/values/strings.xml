@@ -14,6 +14,6 @@
     <string name="common_launch_upcoming">Upcoming</string>
 
     <string name="common_message_no_internet_connection">No internet connection</string>
-    <string name="common_message_load_failed">Cannot load data. Please check your internet connection and try again.</string>
+    <string name="common_message_load_failed">Cannot load data. Please try again.</string>
     <string name="common_message_failed">Something went wrong. Please try again</string>
 </resources>

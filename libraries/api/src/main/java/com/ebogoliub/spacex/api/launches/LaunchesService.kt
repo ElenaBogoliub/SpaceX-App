@@ -1,8 +1,5 @@
 package com.ebogoliub.spacex.api.launches
 
-import com.ebogoliub.spacex.api.common.OrbitParamsDto
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
@@ -63,18 +60,3 @@ interface LaunchesService {
     @GET("launches/next")
     suspend fun getNextLaunch(): LaunchDto
 }
-
-@JsonClass(generateAdapter = true)
-data class Payload(
-    @Json(name = "payload_id") val id: String,
-    @Json(name = "norad_id") val noradId: List<Int>,
-    @Json(name = "reused") val reused: Boolean,
-    @Json(name = "customers") val customers: List<String>,
-    @Json(name = "nationality") val nationality: String?,
-    @Json(name = "manufacturer") val manufacturer: String?,
-    @Json(name = "payload_type") val payloadType: String,
-    @Json(name = "payload_mass_kg") val payloadMassKg: Double?,
-    @Json(name = "payload_mass_lbs") val payloadMassLbs: Double?,
-    @Json(name = "orbit") val orbit: String?,
-    @Json(name = "orbit_params") val orbitParams: OrbitParamsDto
-)

@@ -3,8 +3,12 @@ package com.ebogoliub.spacex.ui.extentions
 import android.app.Activity
 import android.content.Context
 import android.content.res.Configuration
+import android.content.res.Resources
+import android.graphics.Point
 import android.os.Build
+import android.util.TypedValue
 import android.view.View
+import android.view.WindowManager
 import androidx.annotation.ColorRes
 import androidx.annotation.DimenRes
 import androidx.annotation.DrawableRes
@@ -35,30 +39,20 @@ fun Context.formatDate(date: ZonedDateTime, pattern: String): String {
 }
 
 
-fun Any.bindColor(context: Context, @ColorRes id: Int) = lazy(LazyThreadSafetyMode.NONE) {
-    ContextCompat.getColor(context, id)
-}
+fun Context.getColorFromRes(@ColorRes id: Int): Int = ContextCompat.getColor(this, id)
 
-fun Any.bindDrawable(context: Context, @DrawableRes id: Int) = lazy(LazyThreadSafetyMode.NONE) {
-    ContextCompat.getDrawable(context, id)
-}
+fun Context.getDrawableFromRes(@DrawableRes id: Int) = ContextCompat.getDrawable(this, id)
 
-fun Any.bindDimen(context: Context, @DimenRes id: Int) = lazy(LazyThreadSafetyMode.NONE) {
-    context.resources.getDimension(id)
-}
+fun Context.getDimenFromRes(@DimenRes id: Int) = resources.getDimension(id)
 
-fun Any.bindString(context: Context, @StringRes id: Int) = lazy(LazyThreadSafetyMode.NONE) {
-    context.getString(id)
-}
+inline val Context.screenWidth: Int
+    get() = Point().also {
+        (getSystemService(Context.WINDOW_SERVICE) as WindowManager).defaultDisplay.getSize(
+            it
+        )
+    }.x
 
-fun Any.bindColor(view: View, @ColorRes id: Int) = lazy(LazyThreadSafetyMode.NONE) {
-    ContextCompat.getColor(view.context, id)
-}
-
-fun Any.bindDimen(view: View, @DimenRes id: Int) = lazy(LazyThreadSafetyMode.NONE) {
-    view.context.resources.getDimension(id)
-}
-
-fun Any.bindString(view: View, @StringRes id: Int) = lazy(LazyThreadSafetyMode.NONE) {
-    view.context.getString(id)
-}
+inline val Int.dp: Int
+    get() = TypedValue.applyDimension(
+        TypedValue.COMPLEX_UNIT_DIP, this.toFloat(), Resources.getSystem().displayMetrics
+    ).toInt()

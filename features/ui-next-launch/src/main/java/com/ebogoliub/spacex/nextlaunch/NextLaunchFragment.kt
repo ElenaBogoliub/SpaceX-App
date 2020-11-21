@@ -7,16 +7,16 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.ebogoliub.spacex.features.ui.next_launch.R
-import com.ebogoliub.spacex.features.ui.next_launch.databinding.NextLaunchFragmentBinding
+import com.ebogoliub.spacex.features.ui.next_launch.databinding.FragmentNextLaunchBinding
 import dagger.hilt.android.AndroidEntryPoint
 import com.ebogoliub.spacex.data.entity.Launch
 import com.ebogoliub.spacex.ui.animation.fadeInWithTranslationY
 import com.ebogoliub.spacex.ui.extentions.formatDate
 
 @AndroidEntryPoint
-class NextLaunchFragment : Fragment(R.layout.next_launch_fragment) {
+class NextLaunchFragment : Fragment(R.layout.fragment_next_launch) {
 
-    private val binding: NextLaunchFragmentBinding by viewBinding()
+    private val binding: FragmentNextLaunchBinding by viewBinding()
     private val viewModel: NextLaunchViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -25,6 +25,8 @@ class NextLaunchFragment : Fragment(R.layout.next_launch_fragment) {
         viewModel.state.observe(viewLifecycleOwner) { viewState ->
             viewState?.let { render(it) }
         }
+
+        binding.empty.onButtonClick = { viewModel.processAction(InitAction)}
     }
 
     private fun render(state: NextLaunchState) {

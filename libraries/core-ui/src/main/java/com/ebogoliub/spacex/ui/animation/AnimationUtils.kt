@@ -9,16 +9,11 @@ import androidx.core.view.isVisible
 
 private const val DEFAULT_ANIMATION_DURATION = 200L
 
-fun View.fadeIn(duration: Long = DEFAULT_ANIMATION_DURATION) {
-    alpha = 0f
-    isVisible = true
-    this.animate()
-        .alpha(1f)
-        .setDuration(duration)
-        .start()
-}
-
-fun View.fadeInWithTranslationY(duration: Long = DEFAULT_ANIMATION_DURATION, doOnEndCallback: (() -> Unit)? = null, translationY: Float = 55f) {
+fun View.fadeInWithTranslationY(
+    duration: Long = DEFAULT_ANIMATION_DURATION,
+    translationY: Float = 55f,
+    doOnEndCallback: (() -> Unit)? = null
+) {
     alpha = 0f
     isVisible = true
     val animationSet = AnimatorSet()

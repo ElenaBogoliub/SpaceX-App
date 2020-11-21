@@ -41,4 +41,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title"
         tools:text="4D:15H:13M:45S" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

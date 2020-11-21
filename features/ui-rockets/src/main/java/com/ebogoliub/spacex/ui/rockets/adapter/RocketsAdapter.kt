@@ -3,12 +3,8 @@ package com.ebogoliub.spacex.ui.rockets.adapter
 import android.animation.TimeInterpolator
 import android.animation.ValueAnimator
 import android.content.Context
-import android.content.res.Resources
-import android.graphics.Point
-import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.view.WindowManager
 import android.view.animation.AccelerateDecelerateInterpolator
 import androidx.core.animation.doOnEnd
 import androidx.core.animation.doOnStart
@@ -19,7 +15,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ebogoliub.features.ui.rockets.R
 import com.ebogoliub.features.ui.rockets.databinding.ItemRocketBinding
 import com.ebogoliub.spacex.data.entity.Rocket
-import com.ebogoliub.spacex.ui.extentions.bindDimen
+import com.ebogoliub.spacex.ui.extentions.dp
+import com.ebogoliub.spacex.ui.extentions.getDimenFromRes
+import com.ebogoliub.spacex.ui.extentions.screenWidth
 
 class RocketsAdapter(val context: Context) : ListAdapter<Rocket, RocketsViewHolder>(
     object : DiffUtil.ItemCallback<Rocket>() {
@@ -35,8 +33,8 @@ class RocketsAdapter(val context: Context) : ListAdapter<Rocket, RocketsViewHold
     private var expandedItem: Long? = null
     private val originalWidth = context.screenWidth - 48.dp
     private val expandedWidth = context.screenWidth - 24.dp
-    private val originalHeight: Float by bindDimen(context, R.dimen.rocket_item_original_height)
-    private val expandedHeight: Float by bindDimen(context, R.dimen.rocket_item_expanded_height)
+    private val originalHeight: Float = context.getDimenFromRes(R.dimen.rocket_item_original_height)
+    private val expandedHeight: Float = context.getDimenFromRes(R.dimen.rocket_item_expanded_height)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RocketsViewHolder =
         RocketsViewHolder(
@@ -127,15 +125,3 @@ inline fun getValueAnimator(
     a.interpolator = interpolator
     return a
 }
-
-inline val Context.screenWidth: Int
-    get() = Point().also {
-        (getSystemService(Context.WINDOW_SERVICE) as WindowManager).defaultDisplay.getSize(
-            it
-        )
-    }.x
-
-inline val Int.dp: Int
-    get() = TypedValue.applyDimension(
-        TypedValue.COMPLEX_UNIT_DIP, this.toFloat(), Resources.getSystem().displayMetrics
-    ).toInt()

@@ -21,15 +21,15 @@ class ErrorMessageProvider @Inject constructor() {
         error: Throwable,
         @StringRes defaultMessageId: Int = R.string.common_message_failed
     ): EmptyState = when (error) {
-        is NoInternetException -> MessageWithButton(
+        is NoInternetException -> EmptyState.MessageWithButton(
             StringSource.Resources(R.string.common_message_no_internet_connection),
             StringSource.Resources(R.string.common_button_try_again)
         )
-        is ApiException -> MessageWithButton(
+        is ApiException -> EmptyState.MessageWithButton(
             StringSource.Resources(R.string.common_message_load_failed),
             StringSource.Resources(R.string.common_button_try_again)
         )
-        else -> MessageWithButton(
+        else -> EmptyState.MessageWithButton(
             StringSource.Resources(defaultMessageId),
             StringSource.Resources(R.string.common_button_try_again)
         )

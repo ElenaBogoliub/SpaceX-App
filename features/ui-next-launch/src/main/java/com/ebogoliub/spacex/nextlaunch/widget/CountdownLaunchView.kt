@@ -22,7 +22,7 @@ class CountdownLaunchView @JvmOverloads constructor(
     fun setupCountdown(launch: Launch) = with(launch) {
         timer?.cancel()
         when (tentativeMaxPrecision) {
-            DatePrecision.hour -> {
+            DatePrecision.HOUR -> {
                 timer = createTimer(
                     launchTime = Duration.between(ZonedDateTime.now(), launchDateUtc).toMillis(),
                     onTick = { timeToFinish ->
@@ -39,7 +39,7 @@ class CountdownLaunchView @JvmOverloads constructor(
                     }
                 )
             }
-            DatePrecision.day -> {
+            DatePrecision.DAY -> {
                 val days = Duration.between(ZonedDateTime.now(), launchDateUtc).toDays()
                 val plural = resources.getQuantityString(
                     R.plurals.next_launch_day,

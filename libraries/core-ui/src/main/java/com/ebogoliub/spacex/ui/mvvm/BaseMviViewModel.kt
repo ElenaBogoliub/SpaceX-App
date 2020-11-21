@@ -8,11 +8,10 @@ import com.ebogoliub.flowmvi.CoroutinesDispatchersProvider
 import com.ebogoliub.flowmvi.EffectHandler
 import com.ebogoliub.flowmvi.MviStore
 import com.ebogoliub.flowmvi.StateReducer
-import com.ebogoliub.spacex.core.di.CoroutinesDispatchers
+import com.ebogoliub.spacex.core.CoroutinesDispatchers
 import com.ebogoliub.spacex.ui.livedata.*
 import com.ebogoliub.spacex.ui.livedata.MutableLiveDataCollection
 import com.ebogoliub.spacex.ui.livedata.MutableLiveDataCollectionImpl
-import kotlinx.coroutines.CoroutineDispatcher
 import timber.log.Timber
 
 abstract class BaseMviViewModel<State : Any, Action : Any, SideEffect : Any, PartialState : Any>(

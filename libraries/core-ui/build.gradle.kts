@@ -26,7 +26,7 @@ kapt {
 }
 
 dependencies {
-    api(project(":libraries:flowmvi"))
+    api(project(":libraries:flow-mvi"))
     api(project(":libraries:core"))
     api(Libs.Coroutines.android)
 

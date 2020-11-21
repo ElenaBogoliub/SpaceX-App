@@ -13,7 +13,7 @@ object MainThreadWrapper {
     /**
      * The executor used for running code on the main thread.
      */
-    public var executor: Executor
+    var executor: Executor
         get() {
             if (_executor == null) {
                 _executor = MainThreadExecutor()
@@ -27,7 +27,7 @@ object MainThreadWrapper {
     /**
      * Reset the internal executor to the real Android main thread.
      */
-    public fun resetExecutor() {
+    fun resetExecutor() {
         _executor = null
     }
 

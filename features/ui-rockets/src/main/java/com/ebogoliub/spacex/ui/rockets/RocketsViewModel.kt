@@ -5,7 +5,7 @@ import com.ebogoliub.flowmvi.EffectHandler
 import com.ebogoliub.flowmvi.StateReducer
 import com.ebogoliub.flowmvi.StateWithEffects
 import com.ebogoliub.spacex.core.FetcherResult
-import com.ebogoliub.spacex.core.di.CoroutinesDispatchers
+import com.ebogoliub.spacex.core.CoroutinesDispatchers
 import com.ebogoliub.spacex.ui.mvvm.BaseMviViewModel
 import com.ebogoliub.ui.base.content.ErrorMessageProvider
 import kotlinx.coroutines.flow.Flow

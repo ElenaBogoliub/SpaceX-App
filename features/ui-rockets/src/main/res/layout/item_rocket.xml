@@ -195,6 +195,9 @@
                     tools:text="1000000000 $" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.cardview.widget.CardView>
+
 </FrameLayout>

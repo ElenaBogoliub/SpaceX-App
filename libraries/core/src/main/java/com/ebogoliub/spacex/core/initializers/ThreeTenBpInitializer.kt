@@ -1,7 +1,7 @@
 package com.ebogoliub.spacex.core.initializers
 
 import android.app.Application
-import com.ebogoliub.spacex.core.di.CoroutinesDispatchers
+import com.ebogoliub.spacex.core.CoroutinesDispatchers
 import com.jakewharton.threetenabp.AndroidThreeTen
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch

@@ -51,12 +51,12 @@ class EmptyView @JvmOverloads constructor(
 
     private fun renderState(state: EmptyState) {
         when (state) {
-            is Message -> {
+            is EmptyState.Message -> {
                 binding.message.text = state.message.getText(binding.root.context)
                 binding.button1.isVisible = false
             }
 
-            is MessageWithButton -> {
+            is EmptyState.MessageWithButton -> {
                 binding.message.text = state.message.getText(binding.root.context)
                 binding.button1.text = state.buttonText.getText(binding.root.context)
 

@@ -23,9 +23,9 @@ class LaunchesRepository @Inject constructor(
             writer = { launches, _ ->
                 launchDao.clearAndInsert(launches)
             },
-            cacheValidator = { cashedData, params ->
+            cacheValidator = { cachedData, params ->
                 params as LaunchesFetcherParams
-                return@of cashedData.size > 1 || params.offset != 0
+                return@of cachedData.size > 1 || params.offset != 0
             }
         )
     )

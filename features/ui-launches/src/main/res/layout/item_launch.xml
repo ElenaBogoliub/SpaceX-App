@@ -83,5 +83,7 @@
             app:layout_constraintStart_toEndOf="@+id/launchSite"
             tools:ignore="SmallSp"
             tools:text="Launch Successful" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.cardview.widget.CardView>

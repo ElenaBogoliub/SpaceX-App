@@ -5,7 +5,7 @@ import com.ebogoliub.flowmvi.EffectHandler
 import com.ebogoliub.flowmvi.StateReducer
 import com.ebogoliub.flowmvi.StateWithEffects
 import com.ebogoliub.spacex.core.FetcherResult
-import com.ebogoliub.spacex.core.di.CoroutinesDispatchers
+import com.ebogoliub.spacex.core.CoroutinesDispatchers
 import com.ebogoliub.spacex.core.extentions.hasAtLeastSize
 import com.ebogoliub.spacex.data.repository.LaunchesRepository.Companion.DEFAULT_LIMIT
 import com.ebogoliub.spacex.ui.mvvm.BaseMviViewModel
@@ -97,7 +97,7 @@ class LaunchesViewModel @ViewModelInject constructor(
             override fun handle(
                 effects: Flow<LaunchesEffect>
             ): Flow<LaunchesPartialState> {
-                val loadFlow = effects
+                return effects
                     .filterIsInstance<LoadEffect>()
                     .flatMapLatest { effect ->
                         launchesUseCase(effect.offset, effect.refresh)
@@ -108,8 +108,6 @@ class LaunchesViewModel @ViewModelInject constructor(
                             is FetcherResult.Error -> LoadErrorPartialState(result.error)
                         }
                     }
-
-                return loadFlow
             }
         }
 }
